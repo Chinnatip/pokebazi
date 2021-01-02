@@ -1,0 +1,52 @@
+org: chinnatip
+app: pokebazi
+service: pokebazi
+
+provider:
+  name: aws
+  runtime: python3.8
+
+plugins:
+  - serverless-offline
+  - serverless-prune-plugin
+  - serverless-python-requirements
+
+package:
+  exclude:
+    - node_modules/**
+    - venv/**
+
+custom:
+  pythonRequirements:
+    dockerizePip: non-linux
+
+
+functions:
+  current_bazi:
+    handler: src/handler.current_bazi
+    events:
+      - http:
+          path: /
+          method: get
+
+  predict:
+    handler: src/handler.predict_bazi
+    events:
+      - http:
+          path: /predict
+          method: post
+
+  translate_bazi:
+    handler: src/handler.translate_bazi
+    events:
+      - http:
+          path: /translate/bazi
+          method: post
+
+
+  show_all_pokemon:
+    handler: src/handler.show_all_pokemon
+    events:
+      - http:
+          path: /pokemon/lists
+          method: get

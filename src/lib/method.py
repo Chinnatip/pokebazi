@@ -36,7 +36,6 @@ def find_year_stem(year):
 
 def find_day_stem(year, month, day, leap):
     # Prepare day
-    date()
     a = date(year, month, day)
     b = date(year, 1, 1)
 

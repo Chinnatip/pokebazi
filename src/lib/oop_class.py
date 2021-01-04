@@ -79,15 +79,15 @@ class ParcelData:
         self.date = date
         self.time = time
 
-    def day(self): return string_digit(self.date.split('-')[0])
+    def day(self): return string_digit(self.date.split('-')[2])
     def month(self): return string_digit(self.date.split('-')[1])
-    def year(self): return self.date.split('-')[2]
+    def year(self): return self.date.split('-')[0]
     def hour(self): return string_digit(self.time.split(":")[0])
     def min(self): return string_digit(self.time.split(":")[1])
 
     def strp_format(self):
-        dt_string = f"{self.day()}/{self.month()}/{self.year()} {self.hour()}:{self.min()}"
-        return datetime.strptime(dt_string, "%d/%m/%Y %H:00")
+        dt_string = f"{self.year()}/{self.month()}/{self.day()} {self.hour()}:{self.min()}"
+        return datetime.strptime(dt_string, "%Y/%m/%d %H:00")
 
 
 class ParcelBazi:

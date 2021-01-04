@@ -86,7 +86,7 @@ class ParcelData:
     def min(self): return string_digit(self.time.split(":")[1])
 
     def strp_format(self):
-        dt_string = f"{self.year()}/{self.month()}/{self.day()} {self.hour()}:{self.min()}"
+        dt_string = f"{self.year()}/{self.month()}/{self.day()} {self.hour()}:00"
         return datetime.strptime(dt_string, "%Y/%m/%d %H:00")
 
 

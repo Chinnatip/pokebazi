@@ -1,0 +1,73 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Pokebazi",
+		"_postman_id": "cccf3871-7fc1-cacd-927a-5ba5cbec72f6",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Bazi Current",
+			"request": {
+				"url": "{{urlPath}}/dev/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Bazi Predict",
+			"request": {
+				"url": "{{urlPath}}/dev/predict",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"date\": \"8-7-1987\",\n\t\"time\": \"02:00\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Pokemon lists",
+			"request": {
+				"url": "{{urlPath}}/dev/pokemon/lists",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Bazi_translate",
+			"request": {
+				"url": "{{urlPath}}/dev/translate/bazi",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"year\": \"Rooster\",\n\t\"month\": \"Ox\",\n\t\"day\": \"Ox\",\n\t\"hour\": \"Ox\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

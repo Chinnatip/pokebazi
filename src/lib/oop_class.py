@@ -87,6 +87,7 @@ class ParcelData:
 
     def strp_format(self):
         dt_string = f"{self.year()}/{self.month()}/{self.day()} {self.hour()}:00"
+        print(dt_string)
         return datetime.strptime(dt_string, "%Y/%m/%d %H:00")
 
 

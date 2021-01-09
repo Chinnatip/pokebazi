@@ -5,6 +5,18 @@ from src.lib.oop_class import Bazi, ParcelData, ParcelBazi
 from src.lib.method import return_branch_of_year
 
 
+def hello(event, context):
+    response = []
+    response.append({
+        "world": "yes"
+    })
+    response = {
+        "statusCode": 200,
+        "body": json.dumps(response)
+    }
+    return response
+
+
 def show_all_pokemon(event, context):
     response = []
     df = pd.read_csv(

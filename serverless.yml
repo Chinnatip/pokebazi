@@ -29,6 +29,13 @@ functions:
           path: /
           method: get
 
+  hello:
+    handler: src/handler.hello
+    events:
+      - http:
+          path: /hello
+          method: get
+
   predict:
     handler: src/handler.predict_bazi
     events:

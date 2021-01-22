@@ -20,3 +20,5 @@ node_modules/
 
 # Serverless directories
 .serverless
+
+__pycache__
